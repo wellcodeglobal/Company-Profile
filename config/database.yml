@@ -14,7 +14,7 @@ development:
   adapter: postgresql
   database: wellcode
   username: postgres
-  password: kucingismeaw
+  password: wegewg
   pool: 5
   timeout: 5000
 
@@ -26,7 +26,7 @@ test:
   adapter: postgresql
   database: wellcode
   username: postgres
-  password: kucingismeaw
+  password: wegewg
   pool: 5
   timeout: 5000
 
@@ -35,6 +35,6 @@ production:
   adapter: postgresql
   database: wellcode
   username: postgres
-  password: kucingismeaw
+  password: wegewg
   pool: 5
   timeout: 5000
