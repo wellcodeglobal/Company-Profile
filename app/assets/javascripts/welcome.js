@@ -37,7 +37,7 @@ $(document).ready(function () {
     var halfSection2Height = section2Height / 4;
     $("#bg-height").css({ height: section2Height });
     $("#v-align").css({ top: halfSection2Height });
-
+    $(".fullheight-146").css({ height: window.innerHeight - 146.48 });
 
     $("#ideas-box-1").hover(function () {
         $("#ideas-content-text-1").css("display", "block");
@@ -189,70 +189,150 @@ $(document).ready(function () {
         triggerElement: "#section-2",
         reverse: false
     })
-    .setClassToggle('.bg-desktop', 'opacity-90')
-    .addTo(ideasController);
+        .setClassToggle('.bg-desktop', 'opacity-90')
+        .addTo(ideasController);
     var teamsController1 = new ScrollMagic.Controller();
     var teamsScene1 = new ScrollMagic.Scene({
         triggerElement: "#section-3",
         reverse: false
     })
-    .setClassToggle('.box-desktop-1', 'opacity-100')
-    .addTo(teamsController1);
+        .setClassToggle('.box-desktop-1', 'opacity-100')
+        .addTo(teamsController1);
     var teamsController2 = new ScrollMagic.Controller();
     var teamsScene2 = new ScrollMagic.Scene({
         triggerElement: ".box-desktop-1",
         offset: 200,
         reverse: false
     })
-    .setClassToggle('.box-desktop-2', 'opacity-100')
-    .addTo(teamsController2);
+        .setClassToggle('.box-desktop-2', 'opacity-100')
+        .addTo(teamsController2);
     var teamsController3 = new ScrollMagic.Controller();
     var teamsScene3 = new ScrollMagic.Scene({
         triggerElement: ".box-desktop-2",
         offset: 200,
         reverse: false
     })
-    .setClassToggle('.box-desktop-3', 'opacity-100')
-    .addTo(teamsController3);
+        .setClassToggle('.box-desktop-3', 'opacity-100')
+        .addTo(teamsController3);
     var worksController1 = new ScrollMagic.Controller();
     var worksScene1 = new ScrollMagic.Scene({
         triggerElement: "#section-4",
         reverse: false
     })
-    .setClassToggle('.wrapper-desktop-top', 'slide-down')
-    .addTo(worksController1);
+        .setClassToggle('.wrapper-desktop-top', 'slide-down')
+        .addTo(worksController1);
     var worksController2 = new ScrollMagic.Controller();
     var worksScene2 = new ScrollMagic.Scene({
         triggerElement: ".wrapper-desktop-top",
         offset: 400,
         reverse: false
     })
-    .setClassToggle('.wrapper-desktop-left', 'slide-right')
-    .addTo(worksController2);
+        .setClassToggle('.wrapper-desktop-left', 'slide-right')
+        .addTo(worksController2);
     var worksController3 = new ScrollMagic.Controller();
     var worksScene3 = new ScrollMagic.Scene({
         triggerElement: ".wrapper-desktop-top",
         offset: 400,
         reverse: false
     })
-    .setClassToggle('.wrapper-desktop-right', 'slide-left')
-    .addTo(worksController3);
+        .setClassToggle('.wrapper-desktop-right', 'slide-left')
+        .addTo(worksController3);
     var worksController4 = new ScrollMagic.Controller();
     var worksScene4 = new ScrollMagic.Scene({
         triggerElement: ".wrapper-desktop-mid",
         offset: 400,
         reverse: false
     })
-    .setClassToggle('.wrapper-desktop-bottom', 'slide-up')
-    .addTo(worksController4);
+        .setClassToggle('.wrapper-desktop-bottom', 'slide-up')
+        .addTo(worksController4);
     var footerController = new ScrollMagic.Controller();
     var footerScene = new ScrollMagic.Scene({
         triggerElement: ".wrapper-desktop-bottom",
         offset: 200,
         reverse: false
     })
-    .setClassToggle('.footer-content', 'slide-up')
-    .addTo(footerController);
+        .setClassToggle('.footer-content', 'slide-up')
+        .addTo(footerController);
+
+    vertCarousel('.works-list', '.works-btn-prev', '.works-btn-next');
+
+    function vertCarousel(listClass, prevClass, nextClass) {
+        var item = 1,
+            list = $(listClass),
+            prev = $(prevClass),
+            next = $(nextClass),
+            titleCtr = 1;
+
+        prev.on('click', function () {
+            if (item > 1) {
+                item = item - 1;
+                titleCtr--;
+                if (titleCtr == 1) {
+                    $(".works-title").html("PWS");
+                }
+                if (titleCtr == 2) {
+                    $(".works-title").html("e-Ticket");
+                }
+                if (titleCtr == 3) {
+                    $(".works-title").html("Widji (Transaction Processing System)");
+                }
+                if (titleCtr == 4) {
+                    $(".works-title").html("Nawar.in (Application for Auction System)");
+                }
+                if (titleCtr == 5) {
+                    $(".works-title").html("Clickon Studio");
+                }
+                if (titleCtr == 6) {
+                    $(".works-title").html("BBM (Blackberry Messenger)");
+                }
+                worksScroll();
+            }
+        });
+
+        next.on('click', function () {
+            if (item < 6) {
+                item = item + 1;
+                titleCtr++;
+                if (titleCtr == 1) {
+                    $(".works-title").html("PWS");
+                }
+                if (titleCtr == 2) {
+                    $(".works-title").html("e-Ticket");
+                }
+                if (titleCtr == 3) {
+                    $(".works-title").html("Widji (Transaction Processing System)");
+                }
+                if (titleCtr == 4) {
+                    $(".works-title").html("Nawar.in (Application for Auction System)");
+                }
+                if (titleCtr == 5) {
+                    $(".works-title").html("Clickon Studio");
+                }
+                if (titleCtr == 6) {
+                    $(".works-title").html("BBM (Blackberry Messenger)");
+                }
+                worksScroll();
+            }
+        });
+
+        function worksScroll() {
+            var scrollDist = 0;
+            for (var i = 1; i <= item - 1; i++) {
+                scrollDist = scrollDist + list.children().eq(i - 1).outerHeight()
+            }
+            list.css('transform', 'translateY(-' + scrollDist + 'px)');
+            if (item == 6) {
+                next.prop('disabled', true);
+            } else {
+                next.prop('disabled', false);
+            }
+            if (item == 1) {
+                prev.prop('disabled', true);
+            } else {
+                prev.prop('disabled', false);
+            }
+        }
+    }
 });
 
 function openSidebar() {
@@ -302,4 +382,5 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
+
 

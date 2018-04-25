@@ -1,13 +1,13 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 //colors
 $white: #fff;
 $white_opac: rgba(231, 231, 231, .85);
+$white_ease: #eee;
+$blocks: #f5f5f5;
 $cod_gray: #0b0b0b;
 $light_gray: #313131;
 $black: #000;
 $black_opac: rgba(18, 22, 24, .5);
+$primary: #246bd6;
 $color_waterloo__10_approx: rgba(123, 136, 158, 0.1);
 $color_cerulean_approx: #03a9f4;
 
@@ -23,9 +23,9 @@ $url_0: image-url("bg-1-hi.jpg");
 $url_1: image-url("bg-2-hi.jpg");
 $url_2: image-url("bg-6-hi.jpg");
 $url_3: image-url("bg-8.jpg");
-$url_4: image-url("works-bbm.jpg");
+$url_4: image-url("work-bbm.png");
 $url_5: image-url("works-eticket.jpg");
-$url_6: image-url("works-costudios.jpeg");
+$url_6: image-url("works-costudios.png");
 
 //@extend-elements
 //original selectors
@@ -46,8 +46,6 @@ $url_6: image-url("works-costudios.jpeg");
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
-
 * {
 	box-sizing: border-box;
 }
@@ -326,6 +324,24 @@ li {
 	opacity: .90;
 	visibility: visible;
 }
+.w-100 {
+	width: 100%;
+}
+.d-block {
+	display: block;
+}
+.d-flex {
+	display: flex;
+}
+.text-center {
+	text-align: center;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.no-padding {
+	padding: 0;
+}
 #v-align {
 	position: relative;
 }
@@ -359,6 +375,9 @@ li {
 	}
 	&.white-border {
 		border-bottom: .95px solid $white;
+	}
+	&.blue-border {
+		border-bottom: .95px solid $color_cerulean_approx;
 	}
 }
 .page-number {
@@ -527,7 +546,8 @@ li {
   	-o-transition: all 1s ease-out;
 	transition: all 1s ease-out;
 	&.section-1 {
-		background-image: $url_0;
+		background-color: #eee;
+		// background-image: $home-bg;
 		width: 100%;
 	}
 	&.section-2 {
@@ -581,6 +601,7 @@ li {
 		-webkit-margin-before: 0;
 		-webkit-margin-after: 0;
 		li a {
+			color: $black;
 			text-transform: uppercase;
 			padding: 0 20px;
 			opacity: 0.65;
@@ -606,7 +627,7 @@ li {
 .header-tablet {
 	display: none;
 }
-.quote-tablet {
+.project-partner-tablet {
 	display: none;
 }
 .ideas-tablet {
@@ -624,7 +645,7 @@ li {
 .header-mobile {
 	display: none;
 }
-.quote-mobile {
+.project-partner-mobile {
 	display: none;
 }
 .ideas-mobile {
@@ -646,6 +667,7 @@ li {
   	-ms-transition: opacity 1.75s ease-in-out, transform 1.25s ease-out;
   	-o-transition: opacity 1.75s ease-in-out, transform 1.25s ease-out;
 	transition: opacity 1.75s ease-in-out, transform 1.25s ease-out;
+	padding: 5em 2em;
 }
 .footer-desktop .footer-content{
 	opacity: 0;
@@ -677,21 +699,40 @@ li {
 	margin-top: -20px;
 	height: .75px;
 	background: transparent;
-	background-image: -webkit-gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #fff));
-	background-image: -moz-gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #fff));
-	background-image: gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #fff));
+	background-image: -webkit-gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #000));
+	background-image: -moz-gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #000));
+	background-image: gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #000));
 }
-.quote-wrapper {
+.project-partner-wrapper {
 	position: relative;
-	width: 100%;
-	height: 100px;
 }
-.quote-text {
-	position: absolute;
-	top: 225px;
+.project-partner-text {
 	p {
 		color: $white;
-		font-size: 30px;
+		bottom: 25%;
+	}
+}
+.project-partner-content {
+	position: absolute;
+	bottom: 15%;
+	.project-partner-block {
+		border-bottom: .75px solid $black;
+		transition: linear 0.5s;
+		background-color: rgba(36, 107, 214, .02);
+		p {
+			padding: 0 .25em;
+			font-size: 13px;
+			color: $black;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			padding: 1em;
+		}
+		&:hover {
+			box-shadow: 0 -100px 1px $color_cerulean_approx inset;
+		}
+		&:active {
+			box-shadow: 0 -100px 1px $color_cerulean_approx inset;
+		}
 	}
 }
 .ideas-content {
@@ -706,6 +747,116 @@ li {
 		font-weight: 500;
 		padding: 15px 0;
 	}
+}
+#video-wg {
+	min-width: 100%;
+	position: absolute;
+	top: 25%;
+}
+.video-content {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+	height: 355.31px;
+	position: absolute;
+	top: 25%;
+}
+.works {
+	padding: 30px;
+	box-shadow: 0 0 45px 0 #eee inset;
+	position: relative;
+}
+.works-header {
+	position: relative;
+}
+.works-title {
+	margin: 0;
+	font-weight: 300;
+	font-size: 18px;
+	color: $white;
+	i {
+		font-weight: 400;
+	}
+}
+.works-btn {
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	background-color: $white;
+	border-radius: 50%;
+	border: 2px $color_cerulean_approx solid;
+	outline: none;
+	padding: 0;
+	font-size: 30px;
+	color: $color_cerulean_approx;
+	i {
+		line-height: 44px;
+	}
+	opacity: 1;
+	&:disabled {
+		opacity: 0.5;
+	}
+	transition: background-color 350ms ease, color 350ms ease, opacity 350ms ease;
+	&:enabled:hover {
+		background-color: $color_cerulean_approx;
+		color: #fff;
+	}
+}
+.works-btn-prev {
+	right: 60px;
+}
+.works-btn-next {
+	right: 0;
+}
+.works-wrapper {
+	margin: 30px 0 0;
+	overflow: hidden;
+}
+.works-list {
+	padding: 0;
+	margin: 0;
+	transition: transform 1s ease;	
+}
+.works-item {
+	padding: 30px 0;
+	border-bottom: .1px $color_cerulean_approx solid;
+	&:first-child {
+		padding-top: 0;
+	}
+}
+.works-item-content {
+	a {
+		color: $black;
+		text-decoration: none;
+		word-break: break-all;
+	}
+}
+.works-item-img {
+	position: relative;
+	overflow: hidden;
+	height: 240px;
+	margin-top: 30px;
+	background-color: $color_cerulean_approx;
+}
+.works-item-img-magnificent, .works-item-img-co, .works-item-img-bbm {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: unset;
+}
+.works-item-img-magnificent {
+	background-image: $url_5;
+}
+.works-item-img-co {
+	background-image: $url_6;
+}
+.works-item-img-bbm {
+	background-image: $url_4;
+	background-size: contain;
+}
+.works-item-small {
+	font-size: 12px;
+	font-weight: 600;
 }
 .puzzle {
 	transform: skewX(-25deg) translateX(0) translateZ(0);
@@ -796,10 +947,9 @@ li {
 	padding: 1px;
 }
 .works-margin {
-	margin-top: 7em;
+	margin: 7em 0;
 }
 .works-wrapper {
-	width: 80%;
 	display: block;
 	margin: 0 auto;
 }
@@ -855,10 +1005,10 @@ li {
 	width: 100%;
 	display: inline-block;
 	background-color: $color_cerulean_approx;
-	height: 384px;
-	&:first-child {
-		margin-right: 10%;
-	}
+	height: 240px;
+	// &:first-child {
+	// 	margin-right: 10%;
+	// }
 }
 .works-title {
 	font-family: $font_3, $font_4, $font_1;
@@ -875,7 +1025,7 @@ li {
 .works-bbm {
 	background-color: unset;
 	background-image: $url_4;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -909,11 +1059,11 @@ li {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: 1px;
 	background-color: $black_opac;
 	overflow: hidden;
 	width: 100%;
-	height: 384.5px;
+	height: 240px;
 	-webkit-transform:scale(0);
 	-webkit-transition: all .3s ease;
   	-moz-transition: all .3s ease;
@@ -934,29 +1084,51 @@ li {
 	transform: scale(1);
 }
 .footer-wrapper {
-	height: 115px;
-	border-top: .5px solid $light_gray;
+	border-top: 5px solid $color_cerulean_approx;
 }
-.footer-social, .footer-address {
-	font-size: 18px;
-}
-.footer-social {
-	display: -webkit-box!important;
-	display: -webkit-flex!important;
-	display: -ms-flexbox!important;
-	display: flex;
-	
-	svg {
-		margin-right: 5px;
-		width: 25px;
-		height: 25px;
+.footer-content {
+	p {
+		font-size: 13px;
+		-webkit-margin-before: .5em;
+		-webkit-margin-after: .5em;
+	}
+	h4 {
+		font-weight: 600;
+	}
+	.footer-hover {
+		transition: margin .3s ease-in;
+	}
+	.footer-hover:hover {
+		margin-left: 3px;
+		color: $color_cerulean_approx;
 	}
 }
-.footer-address {
-	display: -webkit-box!important;
-	display: -webkit-flex!important;
-	display: -ms-flexbox!important;
-	display: flex;
+.footer-details {
+	text-align: justify;
+	img {
+		width: 125px;
+	}
+	svg {
+		margin-right: .333em;
+	}
+	.footer-social {
+		svg {
+			font-size: 18px;
+		}
+		.fa-envelope {
+			font-size: 13px;
+		}
+		p {
+			-webkit-margin-before: .0;
+			-webkit-margin-after: 0;
+		}
+	}
+	.footer-address {
+		p {
+			-webkit-margin-before: 0;
+		    -webkit-margin-after: 0;
+		}
+	}
 }
 .fp-slidesNav ul li a span {
 	background-color: $white;
@@ -967,9 +1139,15 @@ li {
 .section-2 .fp-tableCell {
 	@extend %extend_1;
 }
-.header-logo h1 {
-	font-family: $font_2, $font_1;
-	font-size: 28px;
+.header-logo {
+	img {
+		width: 100px;
+	}
+	h1 {
+		font-family: $font_2, $font_1;
+		font-size: 28px;
+		color: $black;
+	}
 }
 .team-link svg {
 	color: $white;
@@ -1032,6 +1210,7 @@ li {
 			font-size: 13px;
 			font-weight: 400;
 			display: inline-block;
+			color: $black;
 			-webkit-transition: all 0.5s ease-in-out;
 			-moz-transition: all 0.5s ease-in-out;
 			-ms-transition: all 0.5s ease-in-out;
@@ -1047,21 +1226,17 @@ li {
 			}
 		}
 	}
-	.quote-desktop {
+	.project-partner-desktop {
 		display: none;
 	}
-	.quote-tablet {
+	.project-partner-tablet {
 		display: block;
-
 		.sexy-line {
 			height: 1px;
 			background: transparent;
-			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(5%, #fff));
-			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(5%, #fff));
-			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(5%, #fff));
-		}
-		.quote-text {
-			top: 500px;
+			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
+			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
+			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
 		}
 	}
 	.ideas-desktop {
@@ -1136,12 +1311,6 @@ li {
 	.footer-tablet {
 		display: block;
 	}
-	.footer-wrapper {
-		height: 200px;
-	}
-	.footer-social, .footer-address {
-		font-size: 18px;
-	}
 }
 @media only screen and (max-width: 500px) {
 	.section-1 {
@@ -1170,7 +1339,7 @@ li {
         display: none;
 	}
 	.menu-sidebar {
-		background-color: $white_opac;
+		background-color: $black_opac;
 		border-top-left-radius: 2px;
 		border-bottom-left-radius: 2px;
 		height: 100%;
@@ -1213,27 +1382,19 @@ li {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	.quote-desktop {
+	.project-partner-desktop {
 		display: none;
 	}
-	.quote-tablet {
+	.project-partner-tablet {
 		display: none;
 	}
-	.quote-mobile {
+	.project-partner-mobile {
 		display: block;
 		.sexy-line {
-			margin-left: 15px;
 			background: transparent;
-			background-image: -webkit-gradient(linear, 0 0, 70% 0, from(transparent), to(transparent), color-stop(50%, #fff));
-			background-image: -moz-gradient(linear, 0 0, 70% 0, from(transparent), to(transparent), color-stop(50%, #fff));
-			background-image: gradient(linear, 0 0, 70% 0, from(transparent), to(transparent), color-stop(50%, #fff));
-		}
-		.quote-text {
-			top: 345px;
-			p {
-				color: $white;
-				font-size: 25px;
-			}
+			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
+			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
+			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
 		}
 	}
 	.section-2 {
@@ -1298,6 +1459,12 @@ li {
 	}
 	.footer-mobile {
 		display: block;
+		img {
+			width: 125px;
+		}
+		.footer-details {
+			text-align: unset;
+		}
 	}
 }
 @media only screen and (max-width: 376px) and (min-width: 359px) {
@@ -1306,21 +1473,11 @@ li {
 			font-size: 24px !important;
 		}
 	}
-	.quote-text {
-		p {
-			font-size: 22px !important;
-		}
-	}
 }
+
 @media only screen and (max-width: 321px) and (min-width: 319px) {
 	.header-mobile {
 		.header-logo h1 {
-			font-size: 20px !important;
-		}
-	}
-	.quote-text {
-		top: 300px;
-		p {
 			font-size: 20px !important;
 		}
 	}
