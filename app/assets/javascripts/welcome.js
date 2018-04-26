@@ -223,16 +223,14 @@ $(document).ready(function () {
         .addTo(worksController1);
     var worksController2 = new ScrollMagic.Controller();
     var worksScene2 = new ScrollMagic.Scene({
-        triggerElement: ".wrapper-desktop-top",
-        offset: 400,
+        triggerElement: ".section-2",
         reverse: false
     })
         .setClassToggle('.wrapper-desktop-left', 'slide-right')
         .addTo(worksController2);
     var worksController3 = new ScrollMagic.Controller();
     var worksScene3 = new ScrollMagic.Scene({
-        triggerElement: ".wrapper-desktop-top",
-        offset: 400,
+        triggerElement: ".wrapper-desktop-left",
         reverse: false
     })
         .setClassToggle('.wrapper-desktop-right', 'slide-left')
@@ -247,7 +245,7 @@ $(document).ready(function () {
         .addTo(worksController4);
     var footerController = new ScrollMagic.Controller();
     var footerScene = new ScrollMagic.Scene({
-        triggerElement: ".wrapper-desktop-bottom",
+        triggerElement: ".wrapper-desktop-right",
         offset: 200,
         reverse: false
     })
