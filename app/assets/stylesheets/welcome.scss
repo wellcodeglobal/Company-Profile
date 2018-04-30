@@ -32,7 +32,7 @@ $url_5: image-url("works-eticket.jpg");
 $url_6: image-url("works-costudios.png");
 $url_7: image-url("works-nawarin.png");
 $url_8: image-url("works-widji.png");
-$url_9: image-url("works-pws.jpg");
+$url_9: image-url("works-pivotal.png");
 
 //@extend-elements
 //original selectors
@@ -627,7 +627,7 @@ li {
 			text-transform: uppercase;
 			padding: 0 20px;
 			opacity: .5;
-			font-size: 13px;
+			font-size: 14px;
 			font-weight: 400;
 			display: inline-block;
 			background: transparent;
@@ -728,12 +728,12 @@ li {
 	display: flex;
 }
 .sexy-line {
-	margin-top: -20px;
+	margin-top: -25px;
 	height: .75px;
 	background: transparent;
-	background-image: -webkit-gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #000));
-	background-image: -moz-gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #000));
-	background-image: gradient(linear, 0 0, 75% 0, from(transparent), to(transparent), color-stop(33.3%, #000));
+	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #000));
+	background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #000));
+	background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #000));
 }
 .project-partner-wrapper {
 	position: relative;
@@ -1157,7 +1157,7 @@ li {
 }
 .footer-content {
 	p {
-		font-size: 13px;
+		font-size: 15px;
 		-webkit-margin-before: .5em;
 		-webkit-margin-after: .5em;
 		margin-block-end: .5em;
@@ -1216,7 +1216,7 @@ li {
 }
 .header-logo {
 	img {
-		width: 100px;
+		width: 135px;
 	}
 	h1 {
 		font-family: $font_2, $font_1;
@@ -1490,7 +1490,12 @@ li {
 	}
 	.header-tablet {
         display: none;
-    }
+	}
+	.header-logo {
+		img {
+			width: 100px;
+		}
+	}
     .header-mobile {
         display: block;
 		padding: 10px 0;

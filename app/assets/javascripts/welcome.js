@@ -37,7 +37,8 @@ $(document).ready(function () {
     var halfSection2Height = section2Height / 4;
     $("#bg-height").css({ height: section2Height });
     $("#v-align").css({ top: halfSection2Height });
-    $(".fullheight-146").css({ height: window.innerHeight - 146.48 });
+    $(".fullheight-171").css({ height: window.innerHeight - 171 });
+    $(".fullheight-106").css({ height: window.innerHeight - 106 });
 
     $("#ideas-box-1").hover(function () {
         $("#ideas-content-text-1").css("display", "block");
@@ -338,12 +339,14 @@ function openSidebar() {
     document.getElementById("close").style.display = "block";
     document.getElementById("open").style.display = "none";
     disableScroll();
+    disableTouchScroll();
 }
 
 function closeSidebar() {
     document.getElementById("menu-sidebar").style.width = "0";
     document.getElementById("close").style.display = "none";
     document.getElementById("open").style.display = "block";
+    enableScroll();
     enableScroll();
 }
 
@@ -382,3 +385,10 @@ function enableScroll() {
 }
 
 
+function disableTouchScroll() {
+    $('html, body').bind('touchmove', false);
+}
+
+function enableTouchScroll() {
+    $('html, body').bind('touchmove', true);
+}
