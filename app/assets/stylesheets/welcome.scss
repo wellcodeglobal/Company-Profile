@@ -1247,6 +1247,9 @@ li {
 	padding: 60px 0;
 	background: $white_ease;
 	text-align: center;
+	a {
+		background: transparent;
+	}
 	p {
 		padding: 20px 0 60px;
 		color: $black;
