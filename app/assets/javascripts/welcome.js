@@ -31,6 +31,21 @@
     document.addEventListener('DOMContentLoaded', loadbar, false);
 }());
 $(document).ready(function () {
+    var vPos = 40;
+    $(window).scroll(function () {
+        var aTop = $('.section-1').height();
+        if ($(this).scrollTop()) {
+            if (vPos >= 40 && vPos <= 95) {
+                $('.section-1').css("background-position", "100% " + vPos + "%");
+                vPos = vPos + 5;
+            }
+            else {
+                $('.section-1').css("background-position", "100% " + vPos + "%");
+                vPos = vPos - 5;
+            }
+        }
+    });
+
     $(".section").css({ height: window.innerHeight });
     $(".puzzle").css({ height: $("#section-3").outerHeight() });
     var section2Height = $(".section").height();
@@ -107,7 +122,6 @@ $(document).ready(function () {
     $("#ul-sidebar").children().children().click(function () {
         closeSidebar();
     });
-
 
     $('#anchor-1').click(function () {
         $('html, body').animate({

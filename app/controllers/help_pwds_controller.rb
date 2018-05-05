@@ -1,0 +1,2 @@
+class HelpPwdsController < ApplicationController
+end

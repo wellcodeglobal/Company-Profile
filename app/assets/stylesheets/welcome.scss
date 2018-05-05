@@ -33,6 +33,10 @@ $url_6: image-url("works-costudios.png");
 $url_7: image-url("works-nawarin.png");
 $url_8: image-url("works-widji.png");
 $url_9: image-url("works-pivotal.png");
+$url_10: image-url("bg-slide-1.jpg");
+$url_11: image-url("bg-slide-2.jpg");
+$url_12: image-url("bg-slide-3.jpg");
+$url_13: image-url("bg-slide-4.jpg");
 
 //@extend-elements
 //original selectors
@@ -547,15 +551,16 @@ li {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	-webkit-transition: all 1s ease-out;
-  	-moz-transition: all 1s ease-out;
-  	-ms-transition: all 1s ease-out;
-  	-o-transition: all 1s ease-out;
-	transition: all 1s ease-out;
+	-webkit-transition: all 1.33s ease-out;
+  	-moz-transition: all 1.33s ease-out;
+  	-ms-transition: all 1.33s ease-out;
+  	-o-transition: all 1.33s ease-out;
+	transition: all 1.33s ease-out;
 	&.section-1 {
-		background-color: #eee;
-		// background-image: $home-bg;
+		// background-color: $white_ease;
+		background-image: $url_13;
 		width: 100%;
+		background-position: 100% 40%;
 	}
 	&.section-2 {
 		background-image: $url_1;
@@ -592,6 +597,9 @@ li {
 		background-color: $black_opac;
 		padding: .5em 1em;
 	}
+	a {
+		background: transparent;
+	}
 	svg {
 		font-size: 23px;
 		color: $white;
@@ -623,12 +631,12 @@ li {
 		margin-block-end: 0;
 		margin-block-start: 0;
 		li a {
-			color: $black;
+			color: $white;
 			text-transform: uppercase;
 			padding: 0 20px;
 			opacity: .5;
 			font-size: 14px;
-			font-weight: 400;
+			font-weight: 700;
 			display: inline-block;
 			background: transparent;
 			-webkit-transition: opacity 0.5s ease-in-out;
@@ -731,9 +739,9 @@ li {
 	margin-top: -25px;
 	height: .75px;
 	background: transparent;
-	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #000));
-	background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #000));
-	background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #000));
+	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
+	background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
+	background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
 }
 .project-partner-wrapper {
 	position: relative;
@@ -747,19 +755,35 @@ li {
 .project-partner-content {
 	position: absolute;
 	bottom: 15%;
+	.box {
+		display: none;
+		width:25%;
+		iframe {
+			border: .5px solid $black;
+			border-radius: 3px;
+		}
+	}
+	a:hover + .box,.box:hover {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100;
+	}
 	.project-partner-block {
-		border-bottom: .75px solid $black;
+		border-bottom: .75px solid $white;
 		transition: linear 0.5s;
 		background-color: rgba(36, 107, 214, .02);
 		p {
 			padding: 0 .25em;
 			font-size: 13px;
-			color: $black;
+			color: $white;
 			-webkit-margin-before: 0;
 			-webkit-margin-after: 0;
 			margin-block-end: 0;
 			margin-block-start: 0;
 			padding: 1em;
+			font-weight: 700;
 		}
 		&:hover {
 			box-shadow: 0 -100px 1px $color_cerulean_approx inset;
@@ -1281,6 +1305,7 @@ li {
 	img {
 		width: 100%;
 		max-width: 240px;
+		height: 250px;
 		border-radius: 50%;
 		border: 15px solid transparent;
 		box-shadow: 5px -4px 0 $black_10;
@@ -1322,6 +1347,45 @@ li {
 }
 .hover_img {
 	display: none;
+}
+.help-pwd {
+	padding: 5em 0;
+	p {
+		text-align: left;
+		font-weight: 300;
+		-webkit-margin-before: .5em;
+		-webkit-margin-after: .5em;
+		margin-block-end: .5em;
+		margin-block-start: .5em;
+	}
+	.h-pwd-form {
+		margin: 3em auto;
+	}
+	.h-pwd-box {
+		width: 25%;
+		margin: 0 auto;
+	}
+	input[type="text"], input[type="email"], textarea {
+		resize: none;
+		border: 1px solid $black_opac;
+		border-radius: 3px;
+		height: 30px;
+		width: 100%;
+		overflow: hidden;
+		padding: .5em 1em;
+	}
+	input[type="submit"] {
+		border-radius: 3px;
+		background-color: $white_ease;
+		border: 1px solid $black_opac;
+		padding: 1em 2em;
+		margin: 1em auto;
+		cursor: pointer;
+		transition: all .25s ease-in-out;
+		&:hover {
+			background-color: $white;
+		}
+	}
 }
 @media(min-width: 568px) and(max-width: 992px) {
 	.teamate img {
@@ -1391,9 +1455,9 @@ li {
 		.sexy-line {
 			height: 1px;
 			background: transparent;
-			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
-			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
-			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
+			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
+			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
+			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
 		}
 	}
 	.ideas-desktop {
@@ -1569,9 +1633,9 @@ li {
 		display: block;
 		.sexy-line {
 			background: transparent;
-			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
-			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
-			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $black));
+			background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
+			background-image: -moz-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
+			background-image: gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
 		}
 	}
 	.section-2 {
