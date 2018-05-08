@@ -37,11 +37,11 @@ $(document).ready(function () {
         if ($(this).scrollTop()) {
             if (vPos >= 40 && vPos <= 95) {
                 $('.section-1').css("background-position", "100% " + vPos + "%");
-                vPos = vPos + 5;
+                vPos = vPos + 15;
             }
             else {
                 $('.section-1').css("background-position", "100% " + vPos + "%");
-                vPos = vPos - 5;
+                vPos = vPos - 15;
             }
         }
     });

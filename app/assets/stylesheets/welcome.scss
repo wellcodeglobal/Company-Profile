@@ -78,23 +78,28 @@ body {
 	padding: 0;
 	width: 100%;
 	overflow-x: hidden;
-	font-family: $font_0, $font_1;
+	font-family: $font_0, $font_1 !important;
 	text-rendering: geometricPrecision;
 	line-height: 1.5;
 }
 a {
 	text-decoration: none;
+	background: transparent;
 	&:active {
 		color: $white;
+		background: transparent;
 	}
 	&:hover {
 		color: $white;
+		background: transparent;
 	}
 	&:link {
 		color: $white;
+		background: transparent;
 	}
 	&:visited {
 		color: $white;
+		background: transparent;
 	}
 }
 header {
@@ -381,6 +386,8 @@ li {
 	top: 50px;
 	position: relative;
 	font-weight: 700;
+	font-family: $font_2, $font_1 !important;
+	font-size: 30px;
 	&.black-border {
 		border-bottom: .95px solid $cod_gray;
 	}
@@ -725,7 +732,7 @@ li {
 	display: -ms-flexbox!important;
 	display: flex;
 	h1 {
-		font-family: $font_2, $font_1;
+		font-family: $font_2, $font_1 !important;
 		font-size: 28px;
 	}
 }
@@ -1243,7 +1250,7 @@ li {
 		width: 135px;
 	}
 	h1 {
-		font-family: $font_2, $font_1;
+		font-family: $font_2, $font_1 !important;
 		font-size: 28px;
 		color: $black;
 	}
@@ -1303,7 +1310,7 @@ li {
 		}
 	}
 	img {
-		width: 100%;
+		width: 240px;
 		max-width: 240px;
 		height: 250px;
 		border-radius: 50%;
@@ -1385,11 +1392,6 @@ li {
 		&:hover {
 			background-color: $white;
 		}
-	}
-}
-@media(min-width: 568px) and(max-width: 992px) {
-	.teamate img {
-	max-width: 300px;
 	}
 }
 .member-profile:hover {
@@ -1607,7 +1609,6 @@ li {
 			top: 50%;
 			transform: translate(-50%, -50%);
 			ul li a {
-				color: $black;
 				font-size: 18px;
 				margin: 1em 0;
 				&:active {
