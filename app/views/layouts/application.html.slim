@@ -17,27 +17,13 @@ html
     meta content=("...") name="DC.title" /
     / meta content="" name="google-site-verification" /
 
-    link href="" rel=("shortcut icon") sizes=("16x16 24x24 32x32 48x48 64x64") /
+    link href="images/fav-logo.png" rel=("shortcut icon") sizes=("16x16 24x24 32x32 48x48 64x64") /
     link href="https://fonts.googleapis.com/css?family=Montserrat|Muli:300,400,600" rel="stylesheet" /
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    / = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    / = javascript_include_tag src="jquery-3.3.1.min.js"
-    / = javascript_include_tag src="fontawesome-all.js"
     
+    / script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" 
     = javascript_include_tag src="application.js"
 
-    / javascript:
-    /    $(document).ready(function () {
-    /         $('#fullpage-wrapper').fullpage({
-    /             anchors: ['home', 'ideas', 'team', 'works', 'contact'],
-    /             sectionsColor: ['#4A6FB1', '#939FAA', '#323539', '#455A64', '#939FAA'],
-    /             scrollOverflow: true,
-    /             scrollingSpeed: 1000,
-    /             navigation: true,
-    /             navigationPosition: 'right',
-    /             verticalCentered: false
-    /         });
-    /     });
   body
     = yield
   = javascript_include_tag src="ScrollMagic.min.js"

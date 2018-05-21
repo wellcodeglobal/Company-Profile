@@ -743,7 +743,7 @@ li {
 	display: flex;
 }
 .sexy-line {
-	margin-top: -25px;
+	margin-top: -5px;
 	height: .75px;
 	background: transparent;
 	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
@@ -761,7 +761,7 @@ li {
 }
 .project-partner-content {
 	position: absolute;
-	bottom: 15%;
+	bottom: 0;
 	.box {
 		display: none;
 		width:25%;
@@ -968,16 +968,6 @@ li {
 		&:nth-child(2) {
 			margin-top: 5em;
 		}
-	}
-}
-@-webkit-keyframes shine {
-	100% {
-		left: 125%;
-	}
-}
-@keyframes shine {
-	100% {
-		left: 125%;
 	}
 }
 .team-desktop .team-box {
@@ -1402,6 +1392,128 @@ li {
 		display: block;
 	}
 }
+.w-100 {
+	width: 100%;
+}
+.h-100 {
+	height: 100%;
+}
+.wh-100 {
+	width: 100%;
+	height: 100%;
+}
+.parent {
+	overflow: auto;
+    position: relative;
+}
+.landing {
+	background:#1a293e;
+}
+.landing-wrapper {
+	padding: 3em 2em;
+}
+.text-company {
+	font-weight: 600;
+	font-size: 40px;
+	-webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon2 1.5s ease-in-out infinite alternate;
+	animation: neon2 1.5s ease-in-out infinite alternate;
+}
+.text-quote {
+	font-weight: 400;
+	font-size: 21px;
+	-webkit-animation: neon2 5s ease-in-out infinite alternate;
+	-moz-animation: neon2 5s ease-in-out infinite alternate;
+	animation: neon2 55s ease-in-out infinite alternate;
+}
+.text-loader {
+	color:#fff;
+	text-align: center;
+	text-shadow: 0 0 15px #b3e0ff;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	margin-block-end: 0;
+	margin-block-start: 0;
+} 
+.loader-wrapper {
+	position: relative;
+	margin: 5em auto;
+	width: 250px;
+	height: 100px;	  
+}
+.loader {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-color: #80ccff;
+	box-shadow: 0 0 15px #2187e7;
+	-webkit-animation: spin 30s linear infinite;
+	animation: spin 30s linear infinite;
+}
+.loader1:before {
+	content: "";
+	position: absolute;
+	top: 45px;
+	left: 45px;
+	right: 45px;
+	bottom: 45px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-color: #4398ba;
+	border-style: double;
+	-webkit-animation: spin 15s linear infinite;
+	animation: spin 15s linear infinite;
+}   
+.loader1:after {
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	right: 40px;
+	bottom: 40px;
+	border-radius: 50%;
+	border-color: #59c1eb;
+	border-width: 5px;	
+	border-style: inherit;
+	box-shadow: 0 0 40px #2187e7;
+	-webkit-animation: spin 40s linear infinite;
+	animation: spin 40s linear infinite;
+}
+.loader:before {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-color: #1d5ca9;
+	border-style:dotted;
+	-webkit-animation: spin 18s linear infinite;
+	animation: spin 18s linear infinite;
+}   
+.loader:after {
+	content: "";
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-color: #429bc0;
+	border-width:5px;	
+	border-style:dotted solid;
+	-webkit-animation: spin 60s linear infinite;
+	animation: spin 60s linear infinite;
+}
+#main-wrapper {
+	display: none;
+}
 @media only screen and (max-width: 768px) {
 	.header-desktop {
         display: none;
@@ -1731,5 +1843,47 @@ li {
 		.header-logo h1 {
 			font-size: 20px !important;
 		}
+	}
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes neon2 {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 60px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF;
+	}
+	to {
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 25px #228DFF, 0 0 30px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF;
 	}
 }

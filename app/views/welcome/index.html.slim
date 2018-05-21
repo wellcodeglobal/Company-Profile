@@ -1,5 +1,14 @@
-  body
-    #fullpage-wrapper
+  body onload="loadMain()"
+    #loader.parent.landing.w-100.fullheight
+      .landing-wrapper.wh-100
+        .d-flex.wh-100
+          .col-12.wh-100
+            .loader-wrapper
+              .loader
+                .loader1
+            h1.text-company.text-loader Wellcode Global
+            p.text-quote.text-loader.uppercase your beyond it consultant
+    #main-wrapper
       section#section-1.section.section-1
         header.header-wrapper
           .header-desktop
@@ -7,7 +16,7 @@
               .centered-row-items
                 .col-4
                   .header-logo
-                    img src="images/main-logo.png" title="Wellcode Global"
+                    img src="images/header-logo.png" title="Wellcode Global"
                 .col-8
                   .menu.justify-content-end
                     nav
@@ -25,7 +34,7 @@
               .centered-row-items
                 .col-6.ignore-padding
                   .header-logo
-                    img src="images/main-logo.png" title="Wellcode Global"
+                    img src="images/header-logo.png" title="Wellcode Global"
                 .col-6.ignore-padding
                   .menu.justify-content-end
                     nav
@@ -43,7 +52,7 @@
               .centered-row-items
                 .col-9
                   .header-logo
-                    img src="images/main-logo.png" title="Wellcode Global"
+                    img src="images/header-logo.png" title="Wellcode Global"
                 .col-3
                   .sidebar-logo.justify-content-end
                     a#open href="#" onclick="openSidebar()" 
@@ -323,13 +332,11 @@
                         a href="#top"
                           li
                             img src="images/main-logo.png" title="Wellcode Global"
-                        li.margin-x-lg
-                          p Wellcode Global is an IT Consultant based in Indonesia. We have 4 products that we are working on, the first one is Personal Web Design; you can choose numbers of templates from travelling to your own customization. The second one is IT Consulting; we will give you the best advice to make your ideas come true. The other two projects is still a secret. Thanks for using our service!
-                        .footer-address
-                          li 
-                            p Sudirman Park Kav. 35 Blok C-12, Jakarta Pusat
-                          li 
-                            p Jl. Jawa No. 66, Bandung
+                          .footer-address
+                            li 
+                              p Sudirman Park Kav. 35 Blok C-12, Jakarta Pusat
+                            li 
+                              p Jl. Jawa No. 66, Bandung
                         li
                           p <i class="far fa-copyright"></i> Wellcode Global 2018 
                         .footer-social.margin-x-lg
@@ -376,8 +383,6 @@
                         a href="#top"
                           li
                             img src="images/main-logo.png" title="Wellcode Global"
-                        li.margin-x-lg
-                          p Wellcode Global is an IT Consultant based in Indonesia. We have 4 products that we are working on, the first one is Personal Web Design; you can choose numbers of templates from travelling to your own customization. The second one is IT Consulting; we will give you the best advice to make your ideas come true. The other two projects is still a secret. Thanks for using our service!
                         .footer-address
                           li 
                             p Sudirman Park Kav. 35 Blok C-12, Jakarta Pusat
@@ -404,8 +409,11 @@
                         a href="#top"
                           li
                             img src="images/main-logo.png" title="Wellcode Global"
-                        li
-                          p Wellcode Global is an IT Consultant based in Indonesia. We have 4 products that we are working on, the first one is Personal Web Design; you can choose numbers of templates from travelling to your own customization. The second one is IT Consulting; we will give you the best advice to make your ideas come true. The other two projects is still a secret. Thanks for using our service!
+                        .footer-address
+                          li 
+                            p Sudirman Park Kav. 35 Blok C-12, Jakarta Pusat
+                          li 
+                            p Jl. Jawa No. 66, Bandung
                         h2 Company
                         a href="/ideas"
                           li.footer-hover
@@ -429,11 +437,6 @@
                   .col-12.margin-top-xl
                     .footer-details.justify-content-end
                       ul
-                        .footer-address
-                          li 
-                            p Sudirman Park Kav. 35 Blok C-12, Jakarta Pusat
-                          li 
-                            p Jl. Jawa No. 66, Bandung
                         li
                           p <i class="far fa-copyright"></i> Wellcode Global 2018 
                         .footer-social.margin-x-lg

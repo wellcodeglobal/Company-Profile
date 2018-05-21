@@ -46,12 +46,15 @@ $(document).ready(function () {
         }
     });
 
+    loadMain();
+
     $(".section").css({ height: window.innerHeight });
     $(".puzzle").css({ height: $("#section-3").outerHeight() });
     var section2Height = $(".section").height();
     var halfSection2Height = section2Height / 4;
     $("#bg-height").css({ height: section2Height });
     $("#v-align").css({ top: halfSection2Height });
+    $(".fullheight").css({ height: window.innerHeight });
     $(".fullheight-171").css({ height: window.innerHeight - 171 });
     $(".fullheight-106").css({ height: window.innerHeight - 106 });
 
@@ -346,6 +349,9 @@ $(document).ready(function () {
             }
         }
     }
+
+    // var scene = document.getElementById("scene");
+    // var parallaxInstance = new Parallax(scene);
 });
 
 function openSidebar() {
@@ -397,12 +403,18 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
-
-
 function disableTouchScroll() {
     $('html, body').bind('touchmove', false);
 }
 
 function enableTouchScroll() {
     $('html, body').bind('touchmove', true);
+}
+
+function loadMain() {
+    setTimeout(showMain, 10000);
+}
+function showMain() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("main-wrapper").style.display = "block";
 }
