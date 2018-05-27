@@ -102,6 +102,9 @@ a {
 		background: transparent;
 	}
 }
+p, ol, ul, td {
+	font-family: unset !important;
+}
 header {
 	display: block;
 }

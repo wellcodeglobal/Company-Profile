@@ -412,7 +412,7 @@ function enableTouchScroll() {
 }
 
 function loadMain() {
-    setTimeout(showMain, 1000);
+    setTimeout(showMain, 7000);
 }
 function showMain() {
   document.getElementById("loader").style.display = "none";
