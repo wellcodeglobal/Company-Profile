@@ -743,7 +743,7 @@ li {
 	display: flex;
 }
 .sexy-line {
-	margin-top: -5px;
+	margin-top: -30px;
 	height: .75px;
 	background: transparent;
 	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, $white));
@@ -761,7 +761,7 @@ li {
 }
 .project-partner-content {
 	position: absolute;
-	bottom: 0;
+	bottom: 10%;
 	.box {
 		display: none;
 		width:25%;
@@ -1464,8 +1464,8 @@ li {
 	border: 3px solid transparent;
 	border-color: #4398ba;
 	border-style: double;
-	-webkit-animation: spin 15s linear infinite;
-	animation: spin 15s linear infinite;
+	-webkit-animation: spin 9s linear infinite;
+	animation: spin 9s linear infinite;
 }   
 .loader1:after {
 	content: "";
@@ -1479,8 +1479,8 @@ li {
 	border-width: 5px;	
 	border-style: inherit;
 	box-shadow: 0 0 40px #2187e7;
-	-webkit-animation: spin 40s linear infinite;
-	animation: spin 40s linear infinite;
+	-webkit-animation: spin 18s linear infinite;
+	animation: spin 18s linear infinite;
 }
 .loader:before {
 	content: "";
@@ -1493,8 +1493,8 @@ li {
 	border: 3px solid transparent;
 	border-color: #1d5ca9;
 	border-style:dotted;
-	-webkit-animation: spin 18s linear infinite;
-	animation: spin 18s linear infinite;
+	-webkit-animation: spin 36s linear infinite;
+	animation: spin 36s linear infinite;
 }   
 .loader:after {
 	content: "";
@@ -1508,8 +1508,8 @@ li {
 	border-color: #429bc0;
 	border-width:5px;	
 	border-style:dotted solid;
-	-webkit-animation: spin 60s linear infinite;
-	animation: spin 60s linear infinite;
+	-webkit-animation: spin 24s linear infinite;
+	animation: spin 24s linear infinite;
 }
 #main-wrapper {
 	display: none;
@@ -1884,6 +1884,6 @@ li {
 		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 60px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF;
 	}
 	to {
-		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 25px #228DFF, 0 0 30px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF;
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 25px #228DFF, 0 0 30px #228DFF, 0 0 5px #228DFF, 0 0 10px #228DFF;
 	}
 }
